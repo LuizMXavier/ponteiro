@@ -41,7 +41,7 @@ int main() {
     
     printf("\n--- CADASTRO DE PRODUTOS ---\n");
     for (int i = 0; i < quantidade; i++) {
-        
+        // (estoque + i) calcula o endereço correto de cada posição
         printf("Digite o ID do produto %d: ", i + 1);
         scanf("%d", &(estoque + i)->id); 
         

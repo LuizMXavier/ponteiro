@@ -41,15 +41,15 @@ int main() {
     
     printf("\n--- CADASTRO DE PRODUTOS ---\n");
     for (int i = 0; i < quantidade; i++) {
-        
+        // (estoque + i) calcula o endereço correto de cada posição
         printf("Digite o ID do produto %d: ", i + 1);
-        scanf("%d", &(estoque + i)->id); 
+        scanf("%d", &(estoque + i)->id); // Passamos o endereço do campo ID
         
         printf("Digite o preco do produto %d: ", i + 1);
-        scanf("%f", &(estoque + i)->preco); 
+        scanf("%f", &(estoque + i)->preco); // Passamos o endereço do campo preco
     }
 
-   
+    // 4. Chama a função de impressão passando o ponteiro da memória alocada
     imprimir_produtos(estoque, quantidade);
 
     free(estoque);
