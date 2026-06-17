@@ -15,6 +15,7 @@ void aplicar_desconto(Produto *ptr_prod, float percentual) {
 void imprimir_produtos(Produto *ptr, int quantidade) {
     printf("\n--- RELATORIO DE PRODUTOS ---\n");
     for (int i = 0; i < quantidade; i++) {
+        printf("Posicao %d na memoria: Endereco %p\n", i, (void*)(ptr + i));
         printf("  ID: %d | Preco: R$ %.2f\n", (ptr + i)->id, (ptr + i)->preco);
     }
     printf("-----------------------------\n");
